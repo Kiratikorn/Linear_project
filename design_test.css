@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 label{
     margin: 0 21px;
 }
 
 
-html,
+/* html,
 body {
   height: 100%;
 }
@@ -15,7 +16,7 @@ body {
   justify-content: center;
   align-items: center;
   backface-visibility: hidden;
-}
+} */
 
 input[type="radio"] {
   appearance: none;
@@ -42,15 +43,18 @@ input[type="radio"]:focus {
 }
 
 body {
+  text-align: center;
     background-color: lightblue;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Itim', cursive;
     display: grid;
     place-items: center;
     height: 100vh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+p{
+  font-size: 20px;
+}
   button {
     font-weight: 600;
     outline: 0;

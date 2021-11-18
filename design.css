@@ -83,7 +83,8 @@ a:hover{
 }
 
 body{
-    background-image: url('https://sv1.picz.in.th/images/2021/10/21/uiGqcf.png');
+    /* background-image: url('https://sv1.picz.in.th/images/2021/10/21/uiGqcf.png'); */
+    background-color: #000000;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
