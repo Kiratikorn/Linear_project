@@ -1,18 +1,11 @@
 body{
     margin: 0;
     padding: 0;
-    background: #1d1f20;
+    background: #c96ba8;
     background-image: url("contact_pic.jpg") ;
-    background-size:contain;
-    background-position: center;
     background-repeat: no-repeat;
-}
-img{
-    height: 35rem;
-}
-.center{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+    background-attachment: fixed;
+    background-position: center 2rem;
+    /* background-size: 55rem 35rem; */
+    background-size: 75rem 45rem;
 }

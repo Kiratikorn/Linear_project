@@ -1,19 +1,16 @@
 body{
     margin: 0;
     padding: 0;
-    background: #1d1f20;
+    background: #6156a0;
     background-image: url("about_pic.jpg") ;
-    background-size:contain;
+    /* background-size:contain;
     background-position: center;
+    background-repeat: no-repeat; */
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center 2rem;
+    /* background-size: 55rem 35rem; */
+    background-size: 75rem 45rem;
 }
-img{
-    height: 35rem;
-}
-.center{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
+
 
