@@ -20,7 +20,7 @@ body {
 
 input[type="radio"] {
   appearance: none;
-  margin: 0 40px;
+  margin: 0 2.3rem 1rem;
   width: 30px;
   height: 30px;
   background: #eeeeee;
