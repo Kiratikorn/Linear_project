@@ -16,6 +16,11 @@ function check() {
   quest[7] = parseInt(document.getElementById("quiz").question8.value);
   quest[8] = parseInt(document.getElementById("quiz").question9.value);
   quest[9] = parseInt(document.getElementById("quiz").question10.value);
+  if(quest.includes(NaN)){
+    alert("Please choice all answer");
+    return false
+  }
+
   avg = average(quest);
   console.log("average = " + avg)
   for (let i = 0; i < quest.length; i++) {
@@ -32,9 +37,7 @@ function check() {
   sw /= (u_ubar * sw_v[10])
   nw /= (u_ubar * nw_v[10])
 
-  console.log(ui_ubar)
-  test = [0.1, 0.2, 0.3]
-  console.log(sumSquare(test))
+  // console.log(ui_ubar)
   console.log("u_Ubar = " + u_ubar);
   console.log("hw = " + hw);
   console.log("sw = " + sw);
@@ -46,6 +49,12 @@ function check() {
     result(2)
   else if (sw > hw && nw > hw)
     result(3)
+  else if(avg == 3 && u_ubar == 0)
+    result(4)
+  else if(avg > 3 && u_ubar == 0)
+    result(5)
+  else if(avg < 3 && u_ubar == 0)
+    result(6)
   window.open("index.html","_self")
 }
 
@@ -93,6 +102,24 @@ function result(res) {
       ('<HTML><HEAD><TITLE>Result</TITLE></HEAD><BODY style="background-color:#AED6F1;"><FORM    NAME="form1">' +
       ' <H1 style = "text-align: center;"}>Result is:<br />'  +
         '<img src="sw_nw.jpg" width =100%><br />' +
+        '<INPUT TYPE="button" VALUE="Close"onClick="window.close();"></FORM></BODY>   </HTML>');
+  }
+  else if (res == 4) {
+    msgWindow.document.write
+      ('<HTML><HEAD><TITLE>Result</TITLE></HEAD><BODY style="background-color:#AED6F1;"><FORM    NAME="form1">' +
+      ' <H1 style = "text-align: center;"}>Result is:คุณชอบทุกสายเท่าๆกัน<br />'  +
+        '<INPUT TYPE="button" VALUE="Close"onClick="window.close();"></FORM></BODY>   </HTML>');
+  }
+  else if (res == 5) {
+    msgWindow.document.write
+      ('<HTML><HEAD><TITLE>Result</TITLE></HEAD><BODY style="background-color:#AED6F1;"><FORM    NAME="form1">' +
+      ' <H1 style = "text-align: center;"}>Result is :คุณสามารถเลือกได้ทุกสาย<br />'  +
+        '<INPUT TYPE="button" VALUE="Close"onClick="window.close();"></FORM></BODY>   </HTML>');
+  }
+  else if (res == 6) {
+    msgWindow.document.write
+      ('<HTML><HEAD><TITLE>Result</TITLE></HEAD><BODY style="background-color:#AED6F1;"><FORM    NAME="form1">' +
+      ' <H1 style = "text-align: center;"}>Result is:ไม่มีสายไหนเหมาะกับคุณเลย<br />'  +
         '<INPUT TYPE="button" VALUE="Close"onClick="window.close();"></FORM></BODY>   </HTML>');
   }
  
