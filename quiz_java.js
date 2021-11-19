@@ -17,7 +17,7 @@ function check() {
   quest[8] = parseInt(document.getElementById("quiz").question9.value);
   quest[9] = parseInt(document.getElementById("quiz").question10.value);
   if(quest.includes(NaN)){
-    alert("Please choice all answer");
+    alert("Please choice ALL answers");
     return false
   }
 
@@ -29,8 +29,8 @@ function check() {
     hw += (ui_ubar[i] * hw_v[i]);
     sw += (ui_ubar[i] * sw_v[i]);
     nw += (ui_ubar[i] * nw_v[i]);
-    let txt = (i + 1) + ">>" + ui_ubar[i];
-    console.log(txt);
+    // let txt = (i + 1) + ">>" + ui_ubar[i];
+    // console.log(txt);
   }
   u_ubar = Math.sqrt(u_ubar)
   hw /= (u_ubar * hw_v[10])
@@ -104,22 +104,28 @@ function result(res) {
         '<img src="sw_nw.jpg" width =100%><br />' +
         '<INPUT TYPE="button" VALUE="Close"onClick="window.close();"></FORM></BODY>   </HTML>');
   }
+  // equal 3
   else if (res == 4) {
     msgWindow.document.write
       ('<HTML><HEAD><TITLE>Result</TITLE></HEAD><BODY style="background-color:#AED6F1;"><FORM    NAME="form1">' +
-      ' <H1 style = "text-align: center;"}>Result is:คุณชอบทุกสายเท่าๆกัน<br />'  +
+      ' <H1 style = "text-align: center;"}>Result is: <br />'  +
+      '<img src="equal_3.jpg" width =100%><br />' +
         '<INPUT TYPE="button" VALUE="Close"onClick="window.close();"></FORM></BODY>   </HTML>');
   }
+  // more than 3
   else if (res == 5) {
     msgWindow.document.write
       ('<HTML><HEAD><TITLE>Result</TITLE></HEAD><BODY style="background-color:#AED6F1;"><FORM    NAME="form1">' +
-      ' <H1 style = "text-align: center;"}>Result is :คุณสามารถเลือกได้ทุกสาย<br />'  +
+      ' <H1 style = "text-align: center;"}>Result is : <br />'  +
+      '<img src="more_3.jpg" width =100%><br />' +
         '<INPUT TYPE="button" VALUE="Close"onClick="window.close();"></FORM></BODY>   </HTML>');
   }
+  //less than 3
   else if (res == 6) {
     msgWindow.document.write
       ('<HTML><HEAD><TITLE>Result</TITLE></HEAD><BODY style="background-color:#AED6F1;"><FORM    NAME="form1">' +
-      ' <H1 style = "text-align: center;"}>Result is:ไม่มีสายไหนเหมาะกับคุณเลย<br />'  +
+      ' <H1 style = "text-align: center;"}>Result is: <br />'  +
+      '<img src="less_3.jpg" width =100%><br />' +
         '<INPUT TYPE="button" VALUE="Close"onClick="window.close();"></FORM></BODY>   </HTML>');
   }
  
